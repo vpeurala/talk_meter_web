@@ -11,7 +11,7 @@ addons:
       - libstdc++6
       - fonts-droid-fallback
 before_script:
-  - git clone https://github.com/flutter/flutter.git
+  - test -d flutter || git clone https://github.com/flutter/flutter.git
   - ./flutter/bin/flutter doctor
   - ./flutter/bin/flutter pub global activate webdev
   - ./flutter/bin/flutter pub get
